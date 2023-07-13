@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    background: #111;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+  }
+
+svg {
+    width: 48px;
+    fill: none;
+    stroke-width: 30;
+  }
+  
+  .base {
+    stroke: #ffffff33;
+  }
+  
+  .loading {
+    stroke: #fff;
+    stroke-dasharray: 150, 1503;
+    stroke-dashoffset: 150;
+    animation: loading 3s ease-in-out
+      alternate infinite;
+  }
+  
+  @keyframes loading {
+    0% {
+      stroke-dashoffset: 150;
+      stroke-dasharray: 150, 1503;
+    }
+  
+    50% {
+      stroke-dashoffset: -1503;
+      stroke-dasharray: 150, 1503;
+    }
+  
+    100% {
+      stroke-dashoffset: 150;
+      stroke-dasharray: 1503;
+    }
+  }
+
+
